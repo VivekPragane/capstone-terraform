@@ -1,0 +1,39 @@
+# Local .terraform directories
+.terraform/
+.terraform/*
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Crash logs and backup files
+crash.log
+crash.*.log
+*.backup
+
+# Ignore variables file (contains secrets)
+terraform.tfvars
+*.tfvars
+
+# Ignore key files
+*.pem
+*.key
+*.pub
+
+# IDE / editor files
+*.swp
+*.swo
+*.idea/
+*.vscode/
+*.DS_Store
+
+# Python virtualenvs (if ever used)
+venv/
+__pycache__/
+
+# Logs
+*.log
+
+# Lock file is normally committed, but optional:
+# Uncomment below line if you do NOT want to commit lock file
+# .terraform.lock.hcl
