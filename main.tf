@@ -18,3 +18,10 @@ module "subnets" {
   environment = var.environment
   owner       = "Vivek"
 }
+
+module "routing" {
+  source            = "./modules/routing"
+  vpc_id            = module.vpc.vpc_id
+  public_subnet_ids = module.subnets.public_subnet_ids
+}
+
