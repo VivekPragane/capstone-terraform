@@ -1,39 +1,117 @@
+# ----------------------------------------
+# Terraform related
+# ----------------------------------------
+
 # Local .terraform directories
 .terraform/
-.terraform/*
 
 # Terraform state files
 *.tfstate
 *.tfstate.*
-
-# Crash logs and backup files
-crash.log
-crash.*.log
 *.backup
 
-# Ignore variables file (contains secrets)
+# Terraform plan files
+*.tfplan
+*.plan
+
+# Terraform crash logs
+crash.log
+crash.*.log
+crash.tfstate
+
+# Terraform lock file (should NOT be committed)
+.terraform.lock.hcl
+
+# TFVars (may contain secrets)
 terraform.tfvars
 *.tfvars
 
-# Ignore key files
+
+# ----------------------------------------
+# Overrides (local developer configs)
+# ----------------------------------------
+
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+
+# ----------------------------------------
+# SSH Keys (never commit secrets)
+# ----------------------------------------
+
 *.pem
 *.key
 *.pub
+*.ppk
 
-# IDE / editor files
+
+# ----------------------------------------
+# Editor/IDE files
+# ----------------------------------------
+
+# VS Code
+.vscode/
+.history/
+
+# JetBrains IDEs
+.idea/
+
+# Swap files
 *.swp
 *.swo
-*.idea/
-*.vscode/
-*.DS_Store
 
-# Python virtualenvs (if ever used)
+# OS X Finder metadata
+.DS_Store
+
+# Windows Explorer metadata
+Thumbs.db
+desktop.ini
+
+
+# ----------------------------------------
+# Python virtual environments (if used)
+# ----------------------------------------
+
 venv/
 __pycache__/
 
-# Logs
-*.log
 
-# Lock file is normally committed, but optional:
-# Uncomment below line if you do NOT want to commit lock file
-# .terraform.lock.hcl
+# ----------------------------------------
+# Logs
+# ----------------------------------------
+
+*.log
+logs/
+
+# ----------------------------------------
+# Archives / binaries / local artifacts
+# ----------------------------------------
+
+*.zip
+*.tar
+*.gz
+*.7z
+
+# Do not commit compiled binaries
+*.exe
+*.dll
+*.bin
+
+# ----------------------------------------
+# Project-specific artifacts
+# ----------------------------------------
+
+# Ignore screenshots (user-specific), commit only when needed
+docs/screenshots/**/*.png
+docs/screenshots/**/*.jpg
+docs/screenshots/**/*.jpeg
+docs/screenshots/**/*.gif
+
+# Ignore AWS CLI cache
+.aws/
+
+# Ignore VS Code extensions from devcontainer
+.vscode/extensions/
+
